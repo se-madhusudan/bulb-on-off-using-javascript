@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>Clicking the bulb will turn on and off the bulb.</p>
+<img src="pic_bulboff.gif" alt="bulb" onclick="toggle()" id="bulb">
+
+<script>
+    /*
+	function toggle() {
+    	let ele = document.getElementById("bulb");
+        if(ele.src==="pic_bulboff.gif") {
+        	ele.setAttribute("src", "pic_bulbon.gif");
+        } else {
+        	ele.setAttribute("src", "pic_bulboff.gif");
+        }
+    }
+        // ele.src -> returns the absolute url of image not only filename
+    */
+
+    function toggle() {
+    let ele = document.getElementById("bulb");
+    console.log(ele.src);
+    if (ele.src.endsWith("pic_bulboff.gif")) {
+        // ele.setAttribute("src", "pic_bulbon.gif"); //using setAttribute
+        ele.src="pic_bulbon.gif";
+
+    } else {
+        ele.setAttribute("src", "pic_bulboff.gif");
+    }
+}
+
+</script>
+</body>
+</html>
